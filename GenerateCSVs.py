@@ -54,6 +54,13 @@ def write_file(rows,region):
     output_file_name = region + ".csv"
     output_file = open(output_file_name, 'w')
     delimiter = ":"
+    output_file.write("Region Code" + delimiter +
+                      "Region Name" + delimiter +
+                      "Date" + delimiter +
+                      "Hour (1-24)" + delimiter +
+                      "Reading Value" + delimiter +
+                      "Reading Note" +
+                      "\n")
     for each_row in rows:
         output_string = ""
         for each_element in each_row:

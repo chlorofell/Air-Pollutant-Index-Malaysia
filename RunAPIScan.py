@@ -12,6 +12,8 @@ total_scanners = 3 #number of scanners
 procs = []
 #should put some code to insert new rows into DB for latest dates.
 
+procs.append(Popen("cmd /k python prepDB.py "))
+
 for i in range (0,total_scanners):
     procs.append(Popen("cmd /k python APIScan.py "))
 
